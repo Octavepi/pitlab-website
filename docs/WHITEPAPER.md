@@ -31,7 +31,7 @@ The ARMPIT token exists to reward and support independent developers working to 
 ---
 
 ## The Meme & The Machine
-The “ARMPIT” name riffs on **ARM architecture + Pi hardware**, wrapped in the humor of self-reliance. It’s a joke that became a build — a sweatcoin for open devs.
+The "ARMPIT" name riffs on **ARM architecture + Pi hardware**, wrapped in the humor of self-reliance. It's a joke that became a build — a sweatcoin for open devs.
 
 ---
 
@@ -45,10 +45,40 @@ The “ARMPIT” name riffs on **ARM architecture + Pi hardware**, wrapped in th
 - **Contract:** Verified and open-source.
 - **Liquidity:** LP burned on launch.
 
+### Token Utility
+$PITLAB serves as the utility token for the entire PITLAB ecosystem:
+
+**Free Services:**
+- **pitlab-wallet**: Open-source hardware wallet (Pi Trezor) — completely free, no charges.
+- **pitlab-website**: Documentation, guides, and community resources — free forever.
+
+**Premium Features (pitlab-eltmm):**
+- **MEV Bundler**: Anti-sniper launch protection
+- **Market Maker**: Automated liquidity provision with custom strategies
+- **Advanced Analytics**: Market signals and trading insights
+- **Custom Strategies**: Tailored algorithmic trading
+- **API Access**: Enhanced rate limits for developers
+- **Priority Support**: Direct technical assistance
+
+**Payment Flow:**
+When users purchase premium features with $PITLAB:
+- **33% Burned** — Deflationary mechanism
+- **33% to Holder Rewards Pool** — Rewards long-term holders
+- **33% to Dev Wallet** — Funds continued development
+
+This 3-way split ensures sustained ecosystem growth, rewards community loyalty, and reduces supply over time.
+
 ---
 
 ## Launch Model (Pure Fair-Launch)
 ARMPIT will deploy using a **zero-tax, no-treasury** Base ERC-20 contract. LP tokens are burned post-launch to ensure full decentralization. The deployer walks away; the PIT stays alive through the community.
+
+### First Utility Launch
+The **pitlab-eltmm** premium features will debut simultaneously with the $PITLAB token launch, providing immediate utility:
+- Token holders can access premium trading tools from day one
+- PaymentRouter contract will be deployed and verified on Base
+- Frontend marketplace will be live at launch
+- Full on-chain verification ensures trustless access control
 
 ---
 
@@ -76,10 +106,33 @@ Solana-style SPL tokens are intentionally avoided to ensure hardware wallet supp
 ---
 
 ## Technical Overview
-- **Smart Contract:** OpenZeppelin ERC-20 (modified for Base network)  
-- **Deployment:** Hardhat / Foundry verified on BaseScan  
-- **Hosting:** GitHub + IPFS mirror (static site)  
-- **Dev Tools:** Node.js, Ethers.js, TailwindCSS, Markdown Docs
+
+### Smart Contracts
+- **PITLAB Token:** OpenZeppelin ERC-20 with burn functionality
+- **PaymentRouter:** Feature access management with 3-way split
+- **Deployment:** Hardhat-verified on BaseScan
+- **Security:** Pausable, ReentrancyGuard, input validation
+- **Network:** Base Sepolia (testnet) and Base Mainnet
+
+### Backend (pitlab-eltmm)
+- **Language:** Python 3.11+
+- **Web3:** web3.py for on-chain verification
+- **Features:** MEV bundling, market making, analytics
+- **Caching:** TTL-based access verification (60s cache, 5min stale fallback)
+- **Gating:** Decorator-based feature access control
+
+### Frontend (pitlab-website)
+- **Framework:** Next.js 14 + React 18
+- **Web3:** Ethers.js v6 for wallet integration
+- **Wallet Support:** MetaMask, WalletConnect, hardware wallets
+- **Security:** CSP headers, exact token approvals, gas estimation
+- **Hosting:** GitHub Pages + IPFS mirror (static site)
+
+### Infrastructure
+- **RPC:** Base Sepolia/Mainnet via Alchemy/Infura
+- **Explorer:** BaseScan for contract verification
+- **Dev Tools:** Hardhat, TypeScript, TailwindCSS, Markdown Docs
+- **CI/CD:** GitHub Actions for automated testing and deployment
 
 ---
 
