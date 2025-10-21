@@ -183,12 +183,37 @@ export function Web3Provider({ children }: { children: ReactNode }) {
       );
 
       const amountWei = ethers.parseEther(amount);
-      const tx = await tokenContract.approve(contracts.paymentRouter, amountWei);
-      await tx.wait();
-
-      return tx;
+      
+      // SECURITY: Estimate gas before sending to catch errors early
+      try {
+        const gasEstimate = await tokenContract.approve.estimateGas(
+          contracts.paymentRouter,
+          amountWei
+        );
+        
+        // Add 20% buffer to gas estimate
+        const gasLimit = (gasEstimate * BigInt(120)) / BigInt(100);
+        
+        const tx = await tokenContract.approve(
+          contracts.paymentRouter, 
+          amountWei,
+          { gasLimit }
+        );
+        await tx.wait();
+        
+        return tx;
+      } catch (estimateErr: any) {
+        // Better error messages for users
+        if (estimateErr.code === 'INSUFFICIENT_FUNDS') {
+          throw new Error('Insufficient ETH for gas fees');
+        }
+        throw new Error(`Transaction will fail: ${estimateErr.message}`);
+      }
     } catch (err: any) {
-      setError(err.message || 'Failed to approve tokens');
+      const userMessage = err.code === 4001 
+        ? 'Transaction rejected by user'
+        : err.message || 'Failed to approve tokens';
+      setError(userMessage);
       throw err;
     } finally {
       setLoading(false);
@@ -196,7 +221,7 @@ export function Web3Provider({ children }: { children: ReactNode }) {
   };
 
   const purchaseFeature = async (featureId: string, duration: number) => {
-    if (!signer || !chainId || !isCorrectNetwork) {
+    if (!signer || !chainId || !isCorrectNetwork || !provider) {
       throw new Error('Wallet not connected or wrong network');
     }
 
@@ -211,15 +236,52 @@ export function Web3Provider({ children }: { children: ReactNode }) {
         signer
       );
 
-      const tx = await routerContract.purchaseFeature(featureId, duration);
-      await tx.wait();
+      // SECURITY: Check current price hasn't changed (slippage protection)
+      const routerContractRead = new ethers.Contract(
+        contracts.paymentRouter,
+        PAYMENT_ROUTER_ABI,
+        provider
+      );
+      
+      const currentPrice = await routerContractRead.featurePrices(featureId);
+      if (currentPrice === BigInt(0)) {
+        throw new Error('Feature not configured or price changed');
+      }
 
-      // Update balance after purchase
-      await updatePitlabBalance();
+      // SECURITY: Estimate gas to catch errors before sending
+      try {
+        const gasEstimate = await routerContract.purchaseFeature.estimateGas(
+          featureId,
+          duration
+        );
+        
+        const gasLimit = (gasEstimate * BigInt(120)) / BigInt(100);
+        
+        const tx = await routerContract.purchaseFeature(
+          featureId, 
+          duration,
+          { gasLimit }
+        );
+        await tx.wait();
 
-      return tx;
+        // Update balance after purchase
+        await updatePitlabBalance();
+
+        return tx;
+      } catch (estimateErr: any) {
+        if (estimateErr.code === 'INSUFFICIENT_FUNDS') {
+          throw new Error('Insufficient ETH for gas fees');
+        }
+        if (estimateErr.message?.includes('ERC20: insufficient allowance')) {
+          throw new Error('Please approve tokens first');
+        }
+        throw new Error(`Transaction will fail: ${estimateErr.reason || estimateErr.message}`);
+      }
     } catch (err: any) {
-      setError(err.message || 'Failed to purchase feature');
+      const userMessage = err.code === 4001
+        ? 'Transaction rejected by user'
+        : err.message || 'Failed to purchase feature';
+      setError(userMessage);
       throw err;
     } finally {
       setLoading(false);
