@@ -55,7 +55,7 @@ export default function Community() {
               className="p-4 bg-pit-dark rounded hover:bg-pit-gray-light transition-colors"
             >
               <p className="font-bold mb-1">pitlab-wallet</p>
-              <p className="text-sm text-gray-400">Pi Trezor hardware wallet</p>
+              <p className="text-sm text-gray-400">PitLab Wallet (air-gapped Trezor wallet build for Raspberry Pi)</p>
             </a>
             <a
               href="https://github.com/Octavepi/pitlab-website"
@@ -85,7 +85,7 @@ export default function Community() {
             <h3 className="text-xl font-bold text-pit-yellow mb-4">For Everyone</h3>
             <ul className="space-y-2 text-gray-300 text-sm">
               <li>• Create memes and content</li>
-              <li>• Share your Pi Trezor build</li>
+              <li>• Share your PitLab Wallet build</li>
               <li>• Help answer questions</li>
               <li>• Spread the word</li>
               <li>• HODL and build 💪</li>

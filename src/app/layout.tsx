@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'PITLAB - Sweat-secured. ARM-powered. Built in the PIT.',
-  description: 'ARMPIT ($PITLAB) - Experimental meme-utility token supporting open hardware, DIY security, and grassroots developers building the Pi Trezor initiative.',
+  description: 'ARMPIT ($PITLAB) - Experimental meme-utility token supporting open hardware, DIY security, and grassroots developers building the PitLab Wallet project.',
   keywords: ['PITLAB', 'ARMPIT', 'cryptocurrency', 'hardware wallet', 'Raspberry Pi', 'Base chain', 'ERC-20', 'open source', 'meme token'],
   authors: [{ name: 'PITLAB Contributors' }],
   openGraph: {

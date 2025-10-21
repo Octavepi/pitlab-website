@@ -105,13 +105,13 @@ The complete PITLAB whitepaper is available in `/docs`:
 - **Token:** $PITLAB (ARMPIT) on Base chain
 - **Supply:** 1,000,000,000 fixed
 - **Distribution:** 100% fair launch
-- **Purpose:** Support Pi Trezor open hardware development
+- **Purpose:** Support PitLab Wallet open hardware development
 - **Governance:** Community-led
 
 ## Project Mission
 
 ARMPIT ($PITLAB) exists to support:
-- **Open Hardware** - DIY security devices like Pi Trezor
+- **Open Hardware** - DIY security devices like PitLab Wallet
 - **Grassroots Development** - Independent builder movement
 - **Transparent Finance** - Fair launch, no VCs, community-led
 - **Meme Culture** - Self-aware humor meets serious building
@@ -120,7 +120,7 @@ ARMPIT ($PITLAB) exists to support:
 
 - **Sweat-secured** - Built through hard work and community effort
 - **ARM-powered** - Raspberry Pi ARM architecture foundation
-- **Built in the PIT** - The PITLAB (Pi Trezor Laboratory)
+- **Built in the PIT** - The PITLAB Laboratory
 
 ## Branding Assets
 
@@ -139,7 +139,7 @@ Official logos and branding materials are in `/assets/logo_pack_v1/`:
   - Create comprehensive documentation
   - Build community presence
 - **Phase 2:** Hardware Integration
-  - Pi Trezor + Base wallet testing
+  - PitLab Wallet + Base testing
   - Integration guides and tutorials
 - **Phase 3:** Community Grants & Governance
   - Grant program for contributors
@@ -151,7 +151,7 @@ Official logos and branding materials are in `/assets/logo_pack_v1/`:
 ## Related Repositories
 
 - **Token:** [pitlab-meme](https://github.com/Octavepi/pitlab-meme) - Smart contracts
-- **Hardware:** [pitlab-wallet](https://github.com/Octavepi/pitlab-wallet) - Pi Trezor wallet
+- **Hardware:** [pitlab-wallet](https://github.com/Octavepi/pitlab-wallet) - PitLab Wallet (air-gapped Trezor wallet build for Raspberry Pi)
 
 ## Contributing
 

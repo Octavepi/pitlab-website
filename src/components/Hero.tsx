@@ -16,7 +16,7 @@ export default function Hero() {
         {/* Description */}
         <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-12">
           An experimental meme-utility token on Base chain supporting open hardware,
-          DIY security, and the grassroots developer movement behind the Pi Trezor initiative.
+          DIY security, and the grassroots developer movement building the PitLab Wallet project.
         </p>
 
         {/* CTA Buttons */}
@@ -24,8 +24,8 @@ export default function Hero() {
           <a href="#tokenomics" className="btn-primary">
             Get $PITLAB
           </a>
-          <a href="#hardware" className="btn-secondary">
-            Build Pi Trezor
+          <a href="#hardware" className="btn-accent">
+            Build PitLab Wallet
           </a>
           <a
             href="https://github.com/Octavepi/pitlab-website/blob/main/docs/WHITEPAPER.md"

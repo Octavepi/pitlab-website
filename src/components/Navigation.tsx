@@ -11,6 +11,9 @@ export default function Navigation() {
     { href: '#hardware', label: 'Hardware' },
     { href: '#roadmap', label: 'Roadmap' },
     { href: '#community', label: 'Community' },
+    { href: '/features', label: 'Premium' },
+    { href: '/eltmm', label: 'ELTMM' },
+    { href: '/wallet', label: 'Wallet' },
   ]
 
   const handleLinkClick = () => {

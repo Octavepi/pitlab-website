@@ -21,7 +21,7 @@
 ---
 
 ## Introduction
-ARMPIT ($PITLAB) is an experimental meme-utility token built on the **Base chain**. Its mission: to support open hardware, DIY security, and the grassroots developer movement behind the *Pi Trezor* initiative.
+ARMPIT ($PITLAB) is an experimental meme-utility token built on the **Base chain**. Its mission: to support open hardware, DIY security, and the grassroots developer movement building the PitLab Wallet project.
 
 ---
 
@@ -63,7 +63,7 @@ Governance may emerge once a real contributor base forms. Until then, $PITLAB is
 ## Roadmap & Ecosystem Vision
 **Phase 0:** Fair Launch & LP Burn  
 **Phase 1:** Build Awareness + Meme Growth  
-**Phase 2:** Hardware Integration (Pi Trezor + Base wallet testing)  
+**Phase 2:** Hardware Integration (PitLab Wallet + Base testing)  
 **Phase 3:** Community Grants & Governance Activation  
 **Phase 4:** Web3 Domain, IPFS Site, and Public Registry
 

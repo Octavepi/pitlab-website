@@ -67,7 +67,7 @@ The PITLAB ecosystem is being built in phases, with each phase building on the p
 
 ### Documentation
 - [ ] Complete tokenomics documentation
-- [ ] Write Pi Trezor build guides
+- [ ] Write PitLab Wallet build guides
 - [ ] Create beginner tutorials
 - [ ] Document smart contract code
 - [ ] FAQ and support docs
@@ -115,13 +115,13 @@ The PITLAB ecosystem is being built in phases, with each phase building on the p
 **Timeline:** Q2-Q3 2026
 
 ### Primary Goals
-1. Demonstrate Pi Trezor working with $PITLAB
+1. Demonstrate PitLab Wallet working with $PITLAB
 2. Create comprehensive build tutorials
 3. Test Base chain integration
 4. Document hardware wallet setup
 
 ### Technical Development
-- [ ] Test PITLAB token on Pi Trezor
+- [ ] Test PITLAB token on PitLab Wallet
 - [ ] Verify Base chain support
 - [ ] Create wallet setup guide
 - [ ] Document transaction signing

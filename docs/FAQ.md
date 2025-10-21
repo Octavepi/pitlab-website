@@ -9,12 +9,12 @@
 PITLAB is a three-part ecosystem combining a meme token with open-source hardware development:
 
 1. **$PITLAB Token (ARMPIT)** - Fair-launch ERC-20 token on Base chain
-2. **Pi Trezor Wallet** - DIY hardware wallet for Raspberry Pi
+2. **PitLab Wallet** - DIY hardware wallet for Raspberry Pi
 3. **Community Movement** - Grassroots developers building in the open
 
 ### What does "ARMPIT" stand for?
 
-It's a playful riff on **ARM** (architecture) + **PIT** (Pi Trezor), wrapped in self-aware humor. The name acknowledges it's a meme while highlighting the serious work of building ARM-based crypto hardware.
+It's a playful riff on **ARM** (architecture) + **PIT** (PitLab), wrapped in self-aware humor. The name acknowledges it's a meme while highlighting the serious work of building ARM-based crypto hardware.
 
 ### Is this a serious project?
 
@@ -29,7 +29,7 @@ Yes and no. The meme is real, but so is the hardware. We're building actual open
 1. Get ETH on Base chain (bridge from mainnet or buy on Coinbase)
 2. Connect MetaMask to Base network
 3. Swap ETH for PITLAB on Uniswap
-4. Store in hardware wallet (like Pi Trezor!)
+4. Store in hardware wallet (like PitLab Wallet!)
 
 Detailed guide: [docs/guides/buying-pitlab.md](./guides/buying-pitlab.md)
 
@@ -56,7 +56,7 @@ Always verify on official sources:
 
 ### Can I store PITLAB on a hardware wallet?
 
-Yes! That's a core feature. $PITLAB is ERC-20 specifically to ensure Trezor/Ledger compatibility. Even better - build your own Pi Trezor to store it!
+Yes! That's a core feature. $PITLAB is ERC-20 specifically to ensure Trezor/Ledger compatibility. Even better — build your own PitLab Wallet to store it!
 
 ### Will PITLAB go up in value?
 
@@ -74,9 +74,9 @@ Nobody knows. This is a meme token with no intrinsic value guarantees. The marke
 
 ## Hardware Questions
 
-### What is Pi Trezor?
+### What is PitLab Wallet?
 
-A DIY hardware wallet you can build yourself using a Raspberry Pi. It runs Trezor firmware in an air-gapped environment for secure cryptocurrency storage.
+An air-gapped (simulated hardware) Trezor wallet build for Raspberry Pi — free and open-source.
 
 ### Can I really build my own hardware wallet?
 
@@ -116,7 +116,7 @@ Anything Trezor supports, including:
 - Ethereum and ERC-20 tokens (including PITLAB!)
 - Many other chains
 
-### Do I need to buy PITLAB to build a Pi Trezor?
+### Do I need to buy PITLAB to build a PitLab Wallet?
 
 No! The hardware wallet project is open source and free. The token exists to support development, but building costs nothing except parts.
 
@@ -164,7 +164,7 @@ Many ways:
 - **Code:** Submit PRs to any repository
 - **Documentation:** Improve guides and tutorials
 - **Memes:** Create and share PITLAB content
-- **Building:** Build a Pi Trezor and share your experience
+- **Building:** Build a PitLab Wallet and share your experience
 - **Testing:** Report bugs and test features
 - **Community:** Help answer questions and support others
 
@@ -342,7 +342,7 @@ In development (Phase 1). Current resources:
 4. Improve documentation
 5. Test new features
 
-### I want to build a Pi Trezor. What's next?
+### I want to build a PitLab Wallet. What's next?
 
 1. Read the build guide: [pitlab-wallet](https://github.com/Octavepi/pitlab-wallet)
 2. Get the required parts

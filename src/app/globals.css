@@ -43,6 +43,13 @@
            transform hover:scale-105 active:scale-95;
   }
   
+  /* Burnt orange accent: bold yet mellow */
+  .btn-accent {
+    @apply px-6 py-3 bg-pit-orange text-white font-bold rounded-lg
+           hover:bg-pit-orange-light transition-all duration-300
+           transform hover:scale-105 active:scale-95;
+  }
+  
   .btn-outline {
     @apply px-6 py-3 border-2 border-pit-yellow text-pit-yellow font-bold rounded-lg
            hover:bg-pit-yellow hover:text-pit-dark transition-all duration-300

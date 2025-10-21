@@ -2,16 +2,16 @@ export default function Hardware() {
   return (
     <section id="hardware" className="section bg-pit-gray">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-center mb-4 gradient-text">Pi Trezor Hardware Wallet</h2>
+        <h2 className="text-center mb-4 gradient-text">PitLab Wallet</h2>
         <p className="text-center text-pit-yellow text-xl mb-12">Build Your Own. Verify Everything.</p>
 
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           {/* What is it */}
           <div className="card">
-            <h3 className="text-2xl font-bold text-pit-yellow mb-4">What is Pi Trezor?</h3>
+            <h3 className="text-2xl font-bold text-pit-yellow mb-4">What is PitLab Wallet?</h3>
             <p className="text-gray-300 mb-4 leading-relaxed">
-              A DIY hardware wallet you can build yourself using a Raspberry Pi. It runs Trezor firmware
-              in an air-gapped environment for secure cryptocurrency storage.
+              An air-gapped (simulated hardware) Trezor wallet build for Raspberry Pi — free and open-source.
+              Build it yourself, verify it yourself.
             </p>
             <ul className="space-y-2 text-gray-400">
               <li>✅ Trezor-compatible firmware</li>

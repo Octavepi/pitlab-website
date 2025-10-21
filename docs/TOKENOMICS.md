@@ -67,7 +67,7 @@ PITLAB follows a pure fair-launch model with **ZERO** preferential allocation:
 1. **Hardware Wallet Support**
    - Trezor and Ledger compatible
    - Works with MetaMask + hardware wallet
-   - Secure storage on Pi Trezor device
+   - Secure storage on PitLab Wallet device
 
 2. **Base Chain Benefits**
    - Low transaction fees
@@ -93,7 +93,7 @@ PITLAB follows a pure fair-launch model with **ZERO** preferential allocation:
 
 1. **Community Alignment**
    - Holders are backers of open hardware
-   - Token represents support for Pi Trezor
+   - Token represents support for PitLab Wallet
    - Meme spreads awareness
 
 2. **Trading & Speculation**
@@ -123,7 +123,7 @@ Possible future use cases (if community votes to implement):
    - Bug reports and testing
 
 4. **Hardware Discounts**
-   - Potential discounts on Pi Trezor kits (if offered)
+   - Potential discounts on PitLab Wallet kits (if offered)
    - Access to exclusive builds
    - Early access to new features
 
@@ -148,7 +148,7 @@ Only pay standard Base network gas fees.
 The token price is determined purely by:
 - Supply and demand on DEX
 - Community growth and engagement
-- Development progress on Pi Trezor
+ - Development progress on PitLab Wallet
 - Overall crypto market conditions
 - Meme virality and cultural impact
 
@@ -221,7 +221,7 @@ If the community grows and requests it:
 
 Only buy if you:
 - ✅ Believe in open-source hardware
-- ✅ Want to support Pi Trezor development
+ - ✅ Want to support PitLab Wallet development
 - ✅ Enjoy meme culture
 - ✅ Understand and accept the risks
 - ✅ Can afford to lose your investment
@@ -250,7 +250,7 @@ Only buy if you:
 ### Step 4: Secure Storage
 1. **Hardware Wallet** (Recommended)
    - Transfer to Trezor via MetaMask
-   - Or use Pi Trezor device!
+   - Or use PitLab Wallet device!
 2. **Software Wallet**
    - Keep in MetaMask
    - Backup seed phrase

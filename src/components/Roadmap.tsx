@@ -28,7 +28,7 @@ export default function Roadmap() {
       title: 'Hardware Integration',
       status: 'upcoming',
       items: [
-        'Pi Trezor + Base wallet testing',
+        'PitLab Wallet + Base testing',
         'Integration guides and tutorials',
         'Video build walkthroughs',
         'Beta tester program',

@@ -88,7 +88,7 @@ export default function Tokenomics() {
               <div className="bg-pit-dark rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-2 text-pit-yellow font-bold">
                 4
               </div>
-              <p className="text-sm">HODL in Pi Trezor!</p>
+              <p className="text-sm">HODL in PitLab Wallet!</p>
             </div>
           </div>
         </div>

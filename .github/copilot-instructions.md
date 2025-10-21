@@ -21,7 +21,7 @@ This repository (`pitlab-website`) is part of the **PITLAB Ecosystem** - a unifi
    - Community resources and branding assets
 
 ## Mission Statement
-ARMPIT ($PITLAB) is an experimental meme-utility token supporting open hardware, DIY security, and grassroots developers building the Pi Trezor initiative. The meme is the movement — sweaty, honest, raw effort in the open.
+ARMPIT ($PITLAB) is an experimental meme-utility token supporting open hardware, DIY security, and grassroots developers building the PitLab Wallet project. The meme is the movement — sweaty, honest, raw effort in the open.
 
 ## Repository Purpose
 
@@ -53,7 +53,7 @@ This repository serves as:
 1. **Home** - Hero, tagline, quick overview
 2. **About** - Mission, the meme, the movement
 3. **Token** - Tokenomics, how to buy, contract info
-4. **Hardware** - Pi Trezor project, build guides
+4. **Hardware** - PitLab Wallet project, build guides
 5. **Docs** - Whitepaper, technical documentation
 6. **Community** - GitHub, socials, contribution guides
 7. **Roadmap** - Phases, milestones, progress
@@ -62,7 +62,7 @@ This repository serves as:
 
 - **WHITEPAPER.md** - Complete project vision
 - **TOKENOMICS.md** - Detailed token information
-- **HARDWARE_GUIDE.md** - Pi Trezor build instructions
+- **HARDWARE_GUIDE.md** - PitLab Wallet build instructions
 - **FAQ.md** - Common questions and answers
 - **ROADMAP.md** - Project timeline and goals
 
