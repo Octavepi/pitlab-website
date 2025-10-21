@@ -15,19 +15,19 @@ This Next.js-powered site serves as the central information portal for the $PITL
 This repository is part of the **PITLAB** ecosystem — a collection of open-source tools powered by the $PITLAB utility token:
 
 1. **[pitlab-meme](https://github.com/Octavepi/pitlab-meme)** - Utility token ($PITLAB / ARMPIT) on Base
-   - Powers premium features across PITLAB tools
+   - Powers premium features in pitlab-eltmm
    - 1/3 burned, 1/3 to holders, 1/3 to development
-2. **[pitlab-eltmm](https://github.com/Octavepi/pitlab-eltmm)** - Ethical token launch tool
+2. **[pitlab-eltmm](https://github.com/Octavepi/pitlab-eltmm)** - Ethical token launch tool ⚡ *Premium*
    - MEV-protected fair launches
-   - Premium features unlocked with $PITLAB
-3. **[pitlab-wallet](https://github.com/Octavepi/pitlab-wallet)** - Raspberry Pi hardware wallet
+   - Premium features unlocked with $PITLAB payments
+3. **[pitlab-wallet](https://github.com/Octavepi/pitlab-wallet)** - Raspberry Pi hardware wallet 🎁 *Free*
    - Trezor-compatible air-gapped security
-   - DIY-friendly open hardware
-4. **[pitlab-website](https://github.com/Octavepi/pitlab-website)** (THIS REPO) - Official ecosystem hub
+   - FREE gift to crypto community with ❤️
+4. **[pitlab-website](https://github.com/Octavepi/pitlab-website)** (THIS REPO) - Official ecosystem hub 🎁 *Free*
    - Documentation and whitepapers
    - Web3 interface for PITLAB tools
 
-**Future projects** will integrate $PITLAB as the universal utility token for the ecosystem.
+**This site is completely FREE** — no paywalls, no subscriptions. The only charges in the PITLAB ecosystem come from premium pitlab-eltmm features, which fund development of these free resources and reward $PITLAB holders.
 
 ## 🌐 Live Site
 
