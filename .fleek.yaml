@@ -1,0 +1,51 @@
+# Fleek Configuration for IPFS Deployment
+
+# Site Configuration
+site:
+  name: pitlab-website
+  description: "PITLAB - Sweat-secured. ARM-powered. Built in the PIT."
+  
+# Build Configuration
+build:
+  baseDir: /
+  distDir: out
+  buildCommand: npm run export
+  
+# Environment Variables
+env:
+  NODE_VERSION: 18
+  SITE_URL: https://pitlab.eth
+  
+# IPFS Configuration
+ipfs:
+  gateway: fleek
+  
+# Domain Configuration (add after ENS setup)
+# domains:
+#   - pitlab.eth
+#   - www.pitlab.eth
+
+# Headers
+headers:
+  - source: "/*"
+    headers:
+      - key: "X-Frame-Options"
+        value: "SAMEORIGIN"
+      - key: "X-Content-Type-Options"
+        value: "nosniff"
+      - key: "X-XSS-Protection"
+        value: "1; mode=block"
+      - key: "Referrer-Policy"
+        value: "strict-origin-when-cross-origin"
+
+# Redirects
+redirects:
+  - source: "/github"
+    destination: "https://github.com/Octavepi"
+    type: 301
+  - source: "/token"
+    destination: "https://github.com/Octavepi/pitlab-meme"
+    type: 301
+  - source: "/wallet"
+    destination: "https://github.com/Octavepi/pitlab-wallet"
+    type: 301

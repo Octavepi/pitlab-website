@@ -1,0 +1,10 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Disallow admin or temp directories if any
+Disallow: /admin/
+Disallow: /temp/
+
+# Sitemap location
+Sitemap: https://pitlab.eth/sitemap.xml

@@ -1,0 +1,20 @@
+# Security Contact Information
+
+Contact: security@pitlab.eth (TBD - placeholder)
+Expires: 2026-10-20T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://pitlab.eth/.well-known/security.txt
+
+# Bug Reporting
+Please report security vulnerabilities to:
+- GitHub Security Advisories: https://github.com/Octavepi/pitlab-website/security/advisories/new
+- Email: security@pitlab.eth (TBD)
+
+# PGP Key (TBD)
+# Encryption:  https://pitlab.eth/.well-known/pgp-key.txt
+
+# Acknowledgments
+https://github.com/Octavepi/pitlab-website/blob/main/SECURITY.md
+
+# Policy
+https://github.com/Octavepi/pitlab-website/blob/main/SECURITY.md

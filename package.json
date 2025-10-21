@@ -1,0 +1,61 @@
+{
+  "name": "pitlab-website",
+  "version": "1.0.0",
+  "description": "Official PITLAB website - Sweat-secured. ARM-powered. Built in the PIT.",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "export": "next build && next export",
+    "lint": "next lint",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,md,json}\"",
+    "ipfs:build": "npm run export && node scripts/prepare-ipfs.js",
+    "ipfs:deploy": "npm run ipfs:build && fleek site:deploy",
+    "ipfs:pin": "node scripts/pin-to-ipfs.js",
+    "serve": "npx serve out",
+    "analyze": "ANALYZE=true next build"
+  },
+  "dependencies": {
+    "next": "^14.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "markdown-to-jsx": "^7.4.0",
+    "gray-matter": "^4.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/react": "^18.2.48",
+    "@types/react-dom": "^18.2.18",
+    "autoprefixer": "^10.4.17",
+    "eslint": "^8.56.0",
+    "eslint-config-next": "^14.1.0",
+    "postcss": "^8.4.33",
+    "prettier": "^3.2.4",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.3.3",
+    "@fleek-platform/cli": "^2.0.0",
+    "ipfs-http-client": "^60.0.1"
+  },
+  "keywords": [
+    "pitlab",
+    "armpit",
+    "crypto",
+    "hardware-wallet",
+    "raspberry-pi",
+    "base-chain",
+    "erc20",
+    "ipfs",
+    "web3"
+  ],
+  "author": "PITLAB Contributors",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Octavepi/pitlab-website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Octavepi/pitlab-website/issues"
+  },
+  "homepage": "https://github.com/Octavepi/pitlab-website#readme"
+}

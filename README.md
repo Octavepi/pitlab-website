@@ -1,33 +1,62 @@
 # PITLAB Website
 
-> **Tagline:** *Sweat-secured. ARM-powered. Built in the PIT.*
+> Sweat-secured. ARM-powered. Built in the PIT.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![IPFS](https://img.shields.io/badge/Hosted-IPFS-blue.svg)](https://ipfs.io)
+Official website for the PITLAB ecosystem - home of the ARMPIT ($PITLAB) token and Pi Trezor hardware wallet.
 
-## Overview
+## 🌐 Live Site
 
-Official website and documentation hub for the **PITLAB Ecosystem** - an experimental project combining meme culture with open hardware development.
+- **Production**: [pitlab.eth](https://pitlab.eth.limo) (ENS)
+- **IPFS Gateway**: `https://ipfs.io/ipfs/[CID]`
+- **GitHub**: https://github.com/Octavepi/pitlab-website
 
-This repository contains:
-- Project whitepaper and documentation
-- Official website (IPFS-hosted)
-- Branding and marketing assets
-- Community resources and guides
+## 🚀 Quick Start
 
-## The PITLAB Ecosystem
+```bash
+# Install dependencies
+npm install
 
-This repository is part of a three-component ecosystem:
+# Run development server
+npm run dev
 
-1. **[pitlab-meme](https://github.com/Octavepi/pitlab-meme)** - Token contracts and deployment
-2. **[pitlab-wallet](https://github.com/Octavepi/pitlab-wallet)** - Raspberry Pi hardware wallet
-3. **[pitlab-website](https://github.com/Octavepi/pitlab-website)** (THIS REPO) - Official website and docs
+# Build for production
+npm run build
 
-## Repository Structure
+# Test production build locally
+npm run serve
+
+# Deploy to IPFS
+npm run ipfs:deploy
+```
+
+## 📁 Project Structure
 
 ```
 pitlab-website/
-├── docs/                    # Documentation files
+├── src/
+│   ├── app/              # Next.js app directory
+│   │   ├── layout.tsx    # Root layout with metadata
+│   │   ├── page.tsx      # Main landing page
+│   │   └── globals.css   # Global styles
+│   └── components/       # React components
+│       ├── Navigation.tsx
+│       ├── Hero.tsx
+│       ├── About.tsx
+│       ├── Tokenomics.tsx
+│       ├── Hardware.tsx
+│       ├── Roadmap.tsx
+│       ├── Community.tsx
+│       └── Footer.tsx
+├── public/               # Static assets
+│   ├── icons/           # PWA icons
+│   ├── manifest.json    # PWA manifest
+│   ├── robots.txt       # SEO robots
+│   ├── sitemap.xml      # SEO sitemap
+│   └── .well-known/     # Security & standards
+├── scripts/             # Build & deployment scripts
+│   ├── prepare-ipfs.js  # IPFS build preparation
+│   └── pin-to-ipfs.js   # IPFS pinning
+├── docs/                # Documentation
 │   ├── WHITEPAPER.md       # Main project document
 │   ├── WHITEPAPER.txt      # Text version
 │   └── guides/             # Detailed tutorials (coming soon)
