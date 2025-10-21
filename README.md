@@ -1,8 +1,33 @@
-# PITLAB Website
+# PitLab Website: Official Ecosystem Hub
 
-> Sweat-secured. ARM-powered. Built in the PIT.
+> **Tagline:** *Sweat-secured. ARM-powered. Built in the PIT.*
 
-Official website for the PITLAB ecosystem - home of the ARMPIT ($PITLAB) token and Pi Trezor hardware wallet.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Next.js](https://img.shields.io/badge/Framework-Next.js-black.svg)](https://nextjs.org)
+[![IPFS](https://img.shields.io/badge/Deployed-IPFS-blue.svg)](https://ipfs.io)
+
+**Official website and documentation hub for the PITLAB ecosystem of open-source developer tools.**
+
+This Next.js-powered site serves as the central information portal for the $PITLAB token, hardware wallet project, and all ecosystem tools. Features decentralized hosting via IPFS and ENS.
+
+## The PITLAB Ecosystem
+
+This repository is part of the **PITLAB** ecosystem — a collection of open-source tools powered by the $PITLAB utility token:
+
+1. **[pitlab-meme](https://github.com/Octavepi/pitlab-meme)** - Utility token ($PITLAB / ARMPIT) on Base
+   - Powers premium features across PITLAB tools
+   - 1/3 burned, 1/3 to holders, 1/3 to development
+2. **[pitlab-eltmm](https://github.com/Octavepi/pitlab-eltmm)** - Ethical token launch tool
+   - MEV-protected fair launches
+   - Premium features unlocked with $PITLAB
+3. **[pitlab-wallet](https://github.com/Octavepi/pitlab-wallet)** - Raspberry Pi hardware wallet
+   - Trezor-compatible air-gapped security
+   - DIY-friendly open hardware
+4. **[pitlab-website](https://github.com/Octavepi/pitlab-website)** (THIS REPO) - Official ecosystem hub
+   - Documentation and whitepapers
+   - Web3 interface for PITLAB tools
+
+**Future projects** will integrate $PITLAB as the universal utility token for the ecosystem.
 
 ## 🌐 Live Site
 
