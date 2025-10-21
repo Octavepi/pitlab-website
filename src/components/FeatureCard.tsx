@@ -20,12 +20,7 @@ export default function FeatureCard({
   icon,
   featureId,
 }: FeatureCardProps) {
-  const {
-    purchaseFeature,
-    hasFeatureAccess,
-    approveTokens,
-    loading,
-  } = useWeb3();
+  const { purchaseFeature, hasFeatureAccess, approveTokens, loading } = useWeb3() as any;
 
   const [purchasing, setPurchasing] = useState(false);
   const [hasAccess, setHasAccess] = useState(false);
@@ -39,7 +34,10 @@ export default function FeatureCard({
   const checkAccess = async () => {
     setChecking(true);
     try {
-      const access = await hasFeatureAccess(featureId);
+      // Compute featureId deterministically from feature key to avoid relying on config placeholders
+      const { keccak256, toUtf8Bytes } = await import('ethers');
+      const computedId = keccak256(toUtf8Bytes(featureKey));
+      const access = await hasFeatureAccess(computedId);
       setHasAccess(access);
     } catch (err) {
       console.error('Failed to check access:', err);
@@ -59,9 +57,11 @@ export default function FeatureCard({
       console.log(`Approving ${priceAmount} PITLAB...`);
       await approveTokens(priceAmount);
 
-      // Step 2: Purchase feature (0 = permanent)
+  // Step 2: Purchase feature (0 = permanent)
       console.log('Purchasing feature...');
-      await purchaseFeature(featureId, 0);
+  const { keccak256, toUtf8Bytes } = await import('ethers');
+  const computedId = keccak256(toUtf8Bytes(featureKey));
+  await purchaseFeature(computedId, 0);
 
       setHasAccess(true);
       alert(`${name} purchased successfully! 🎉`);

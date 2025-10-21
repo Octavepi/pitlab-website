@@ -18,6 +18,11 @@ interface Web3ContextType {
   purchaseFeature: (featureId: string, duration: number) => Promise<void>;
   hasFeatureAccess: (featureId: string) => Promise<boolean>;
   approveTokens: (amount: string) => Promise<void>;
+  // Convenience helpers by feature key
+  computeFeatureId: (featureKey: string) => string;
+  hasFeatureAccessByKey: (featureKey: string) => Promise<boolean>;
+  purchaseFeatureByKey: (featureKey: string, duration: number) => Promise<void>;
+  getFeaturePrice: (featureKey: string) => Promise<string | null>;
   loading: boolean;
   error: string | null;
 }
@@ -220,6 +225,10 @@ export function Web3Provider({ children }: { children: ReactNode }) {
     }
   };
 
+  const computeFeatureId = (featureKey: string): string => {
+    return ethers.keccak256(ethers.toUtf8Bytes(featureKey));
+  };
+
   const purchaseFeature = async (featureId: string, duration: number) => {
     if (!signer || !chainId || !isCorrectNetwork || !provider) {
       throw new Error('Wallet not connected or wrong network');
@@ -308,6 +317,31 @@ export function Web3Provider({ children }: { children: ReactNode }) {
     }
   };
 
+  const hasFeatureAccessByKey = async (featureKey: string): Promise<boolean> => {
+    return hasFeatureAccess(computeFeatureId(featureKey));
+  };
+
+  const purchaseFeatureByKey = async (featureKey: string, duration: number) => {
+    return purchaseFeature(computeFeatureId(featureKey), duration);
+  };
+
+  const getFeaturePrice = async (featureKey: string): Promise<string | null> => {
+    if (!provider || !chainId || !isCorrectNetwork) return null;
+    try {
+      const contracts = getContracts(chainId);
+      const routerContract = new ethers.Contract(
+        contracts.paymentRouter,
+        PAYMENT_ROUTER_ABI,
+        provider
+      );
+      const price = await routerContract.featurePrices(computeFeatureId(featureKey));
+      return ethers.formatEther(price);
+    } catch (err) {
+      console.error('Failed to get feature price:', err);
+      return null;
+    }
+  };
+
   return (
     <Web3Context.Provider
       value={{
@@ -323,6 +357,10 @@ export function Web3Provider({ children }: { children: ReactNode }) {
         switchNetwork,
         purchaseFeature,
         hasFeatureAccess,
+        computeFeatureId,
+        hasFeatureAccessByKey,
+        purchaseFeatureByKey,
+        getFeaturePrice,
         approveTokens,
         loading,
         error,

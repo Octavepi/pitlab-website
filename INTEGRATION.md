@@ -277,6 +277,25 @@ current_hour = int(time.time() // 3600)
 has_access = check_access_cached(user, feature, current_hour)
 ```
 
+## Cross-Repository Alignment
+
+**Critical:** Changes to pitlab-eltmm (backend) must be synchronized with pitlab-website (frontend).
+
+See [/CROSS_REPO_ALIGNMENT.md](../../CROSS_REPO_ALIGNMENT.md) for complete guide.
+
+### Quick Sync Checklist
+- [ ] Feature names match in backend `FEATURES` and frontend `FEATURE_INFO`
+- [ ] Feature IDs computed consistently (use `calculate-feature-ids.js`)
+- [ ] Contract addresses match in `.env` and `contracts.ts`
+- [ ] ABIs are identical in both repos
+- [ ] Documentation updated in both repos
+
+### Common Sync Points
+1. **Adding features**: Update both `PaymentClient.FEATURES` and `FEATURE_INFO`
+2. **Changing prices**: Update deployment script and frontend config
+3. **Modifying contracts**: Update ABIs in both repos
+4. **New addresses**: Update all env files and configs
+
 ## Security Considerations
 
 1. **Private Keys**
@@ -285,7 +304,7 @@ has_access = check_access_cached(user, feature, current_hour)
    - Backend queries are read-only (no keys needed)
 
 2. **RPC Rate Limiting**
-   - Use caching to minimize RPC calls
+   - Use caching to minimize RPC calls (60s TTL, 5min stale fallback in backend)
    - Consider running own Base node for production
 
 3. **Feature Verification**
@@ -294,8 +313,9 @@ has_access = check_access_cached(user, feature, current_hour)
    - Cache with reasonable TTL (1 hour)
 
 4. **Token Approvals**
-   - Recommend limited approvals (exact amount)
-   - Warn users about unlimited approvals
+   - Frontend uses exact approvals (no unlimited)
+   - Gas estimation with 20% buffer
+   - Slippage protection on price checks
 
 ## Troubleshooting
 
