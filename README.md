@@ -29,6 +29,19 @@ This repository is part of the **PITLAB** ecosystem — a collection of open-sou
 
 **This site is completely FREE** — no paywalls, no subscriptions. The only charges in the PITLAB ecosystem come from premium pitlab-eltmm features, which fund development of these free resources and reward $PITLAB holders.
 
+## 📚 Ecosystem Documentation
+
+**All canonical cross-repository documentation is maintained in [pitlab-ecosystem](https://github.com/Octavepi/pitlab-ecosystem):**
+
+- [Cross-Repo Alignment Guide](../pitlab-ecosystem/docs/CROSS_REPO_ALIGNMENT.md) - How to keep all repos synchronized
+- [Infrastructure Documentation](../pitlab-ecosystem/docs/INFRASTRUCTURE.md) - Complete payment system architecture
+- [Quick Start Guide](../pitlab-ecosystem/docs/QUICK_START.md) - User onboarding walkthrough
+- [Dependencies Status](../pitlab-ecosystem/docs/DEPENDENCIES_STATUS.md) - All project dependencies
+- [Security Audit](../pitlab-ecosystem/docs/security/SECURITY_AUDIT.md) - Comprehensive security review
+- [Security Fixes](../pitlab-ecosystem/docs/security/SECURITY_FIXES.md) - Summary of applied fixes
+
+A local clone is available at `../pitlab-ecosystem` in the workspace.
+
 ## 🌐 Live Site
 
 - **Production**: [pitlab.eth](https://pitlab.eth.limo) (ENS)
