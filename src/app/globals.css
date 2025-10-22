@@ -72,8 +72,15 @@
 
 @layer utilities {
   .text-balance {
-    text-wrap: balance;
+    /* Fallbacks for older browsers */
+    overflow-wrap: anywhere;
+    word-break: break-word;
   }
+}
+
+/* Use modern text-wrap only where supported to avoid warnings */
+@supports (text-wrap: balance) {
+  .text-balance { text-wrap: balance; }
 }
 
 /* Custom scrollbar */

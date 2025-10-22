@@ -24,7 +24,7 @@ USER_ADDRESS=0x... # your wallet
 `}
             </pre>
             <p className="text-gray-400 text-sm mt-2">
-              See full integration steps in <a className="text-pit-yellow underline" href="/INTEGRATION.md" target="_blank">INTEGRATION.md</a>.
+              See full integration steps in <a className="text-pit-yellow underline" href="/INTEGRATION.md" target="_blank" rel="noopener noreferrer">INTEGRATION.md</a>.
             </p>
           </div>
           <div className="card">

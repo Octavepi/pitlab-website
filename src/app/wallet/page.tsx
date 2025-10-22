@@ -22,7 +22,7 @@ export default function WalletPage() {
               <li>Connect to Base and test signing a transaction.</li>
             </ol>
             <p className="text-gray-400 text-sm mt-3">
-              See <a className="text-pit-yellow underline" href="https://github.com/Octavepi/pitlab-wallet#readme" target="_blank" rel="noreferrer">pitlab-wallet/README.md</a> for detailed instructions.
+              See <a className="text-pit-yellow underline" href="https://github.com/Octavepi/pitlab-wallet#readme" target="_blank" rel="noopener noreferrer">pitlab-wallet/README.md</a> for detailed instructions.
             </p>
           </div>
 

@@ -47,7 +47,7 @@ export default function Tokenomics() {
                   <span className="font-bold">100%</span>
                 </div>
                 <div className="w-full bg-pit-gray-light rounded-full h-4">
-                  <div className="bg-gradient-pit h-4 rounded-full" style={{ width: '100%' }}></div>
+                  <div className="bg-gradient-pit h-4 rounded-full w-full"></div>
                 </div>
               </div>
               <div className="text-sm text-gray-400 space-y-2">

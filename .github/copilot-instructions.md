@@ -71,9 +71,9 @@ This repository serves as:
 ### Visual Identity
 
 - **Primary Colors:**
-  - PIT Yellow: #FFD700 (gold, sweat, effort)
-  - ARM Blue: #0066CC (tech, trust, Base chain)
-  - Dark Background: #0A0A0A (sleek, professional)
+  - PIT Yellow: Gold (sweat, effort)
+  - ARM Blue: Deep Blue (tech, trust, Base chain)
+  - Dark Background: Near-Black (sleek, professional)
 
 - **Typography:**
   - Headers: Bold, sans-serif, modern
@@ -165,7 +165,7 @@ contract PITLAB is ERC20 {
 }
 ```
 
-![Logo](../assets/logo.png)
+![Logo](../assets/logo_pack_v1/mark_shield_sweat.svg)
 
 [Related Doc](./related.md)
 ```
